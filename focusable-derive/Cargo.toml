@@ -1,12 +1,13 @@
 [package]
 name = "focusable-derive"
-description = "Derive macro for the <a href='https://crates.io/crates/focusable'>Focusable</a> crate"
+description = "Derive macro for the focusable crate"
 
 version.workspace = true
 edition.workspace = true
 license.workspace = true
 documentation.workspace = true
 repository.workspace = true
+readme.workspace = true
 
 [lib]
 proc-macro = true

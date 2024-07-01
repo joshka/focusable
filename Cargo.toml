@@ -8,6 +8,7 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 documentation = "https://docs.rs/focusable"
 repository = "https://github.com/joshka/focusable"
+readme = "README.md"
 
 [workspace.dependencies]
 focusable-derive = { version = "0.1.0", path = "focusable-derive" }
