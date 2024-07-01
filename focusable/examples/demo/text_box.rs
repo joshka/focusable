@@ -1,12 +1,12 @@
-use focusable::{Focus, FocusState};
+use focusable::Focus;
 use tracing::{info, instrument};
 
 use crate::Render;
 
 #[derive(Debug, Focus)]
 pub struct TextBox {
-    focus_state: FocusState,
     content: String,
+    is_focused: bool,
 }
 
 impl TextBox {
@@ -14,7 +14,7 @@ impl TextBox {
     pub fn new(content: &str) -> Self {
         Self {
             content: content.to_string(),
-            focus_state: FocusState::default(),
+            is_focused: false,
         }
     }
 }
@@ -22,6 +22,6 @@ impl TextBox {
 impl Render for TextBox {
     #[instrument(level = "debug", skip(self))]
     fn render(&self) {
-        info!(focus_state = ?self.focus_state, "{}", self.content);
+        info!(?self.is_focused, "{}", self.content);
     }
 }

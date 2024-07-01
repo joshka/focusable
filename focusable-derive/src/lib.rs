@@ -8,13 +8,18 @@ pub fn focusable_derive(input: TokenStream) -> TokenStream {
     let output = quote::quote! {
         impl Focus for #name {
             #[instrument(level = "trace", skip(self), ret)]
-            fn focus_state(&self) -> FocusState {
-                self.focus_state
+            fn is_focused(&self) -> bool {
+                self.is_focused
             }
 
             #[instrument(level = "trace", skip(self))]
-            fn set_focus_state(&mut self, state: FocusState) {
-                self.focus_state = state;
+            fn focus(&mut self) {
+                self.is_focused = true;
+            }
+
+            #[instrument(level = "trace", skip(self))]
+            fn blur(&mut self) {
+                self.is_focused = false;
             }
         }
     };

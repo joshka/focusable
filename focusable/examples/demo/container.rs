@@ -1,19 +1,19 @@
-use focusable::{Focus, FocusContainer, FocusState};
+use focusable::{Focus, FocusContainer};
 use tracing::{debug, info, instrument};
 
 use crate::{Render, Widget};
 
 #[derive(Debug, Focus)]
 pub struct Container {
-    focus_state: FocusState,
     pub children: Vec<Box<dyn Widget>>,
+    is_focused: bool,
 }
 
 impl Container {
     #[instrument(level = "debug")]
     pub fn new() -> Self {
         Self {
-            focus_state: FocusState::default(),
+            is_focused: false,
             children: Vec::new(),
         }
     }
@@ -27,7 +27,7 @@ impl Container {
 impl Render for Container {
     #[instrument(level = "debug", skip(self))]
     fn render(&self) {
-        info!(focus_state = ?self.focus_state, "Container has {} children", self.children.len());
+        info!(?self.is_focused, "Container has {} children", self.children.len());
         for child in &self.children {
             child.render();
         }

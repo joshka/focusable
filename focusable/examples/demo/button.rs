@@ -1,11 +1,11 @@
-use focusable::{Focus, FocusState};
+use focusable::Focus;
 use tracing::{info, instrument};
 
 use crate::Render;
 
 #[derive(Debug, Default, Focus)]
 pub struct Button {
-    focus_state: FocusState,
+    is_focused: bool,
     label: String,
 }
 
@@ -14,7 +14,7 @@ impl Button {
     pub fn new(label: &str) -> Self {
         Self {
             label: label.to_string(),
-            focus_state: FocusState::default(),
+            is_focused: false,
         }
     }
 }
@@ -22,6 +22,6 @@ impl Button {
 impl Render for Button {
     #[instrument(level = "debug", skip(self))]
     fn render(&self) {
-        info!(focus_state = ?self.focus_state, "{}", self.label);
+        info!(?self.is_focused, "{}", self.label);
     }
 }
