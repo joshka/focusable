@@ -7,7 +7,7 @@ extern crate focusable_derive;
 pub use focusable_derive::Focus;
 use tracing::debug;
 
-pub trait Focus: Debug {
+pub trait Focus {
     /// Check if the widget is focused
     fn is_focused(&self) -> bool;
 

@@ -3,7 +3,7 @@ use tracing::{debug, info, instrument};
 
 use crate::{Render, Widget};
 
-#[derive(Debug, Focus)]
+#[derive(Focus)]
 pub struct Container {
     pub children: Vec<Box<dyn Widget>>,
     is_focused: bool,
@@ -18,7 +18,7 @@ impl Container {
         }
     }
 
-    #[instrument(level = "debug")]
+    #[instrument(level = "debug", skip(self, child))]
     pub fn add_child(&mut self, child: Box<dyn Widget>) {
         self.children.push(child);
     }
