@@ -2,11 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [0.1.1] - 2024-07-01
 
 ### ⚙️ Miscellaneous Tasks
 
 - [2890573](https://github.com/joshka/focusable/commit/28905735d6e2d05ed35a35326e1f6964a5536d4a) Fixup readme path and crate description
+
+- [762c0e5](https://github.com/joshka/focusable/commit/762c0e5cac81c9ba9fc80de2e1e7d9cf53d6b270) Fixup changelog format
 
 ## [0.1.0] - 2024-07-01
 
