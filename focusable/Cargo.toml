@@ -1,0 +1,20 @@
+[package]
+name = "focusable"
+description = "A trait for types that can be focused"
+
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+documentation.workspace = true
+repository.workspace = true
+
+[features]
+default = ["derive"]
+derive = ["dep:focusable-derive"]
+
+[dependencies]
+focusable-derive = { workspace = true, optional = true }
+tracing = "0.1.40"
+
+[dev-dependencies]
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
