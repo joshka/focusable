@@ -10,7 +10,7 @@ use ratatui::{
 use super::FocusableWidget;
 
 #[derive(Debug, Clone, Focus)]
-pub(crate) struct TextBox {
+pub struct TextBox {
     pub(crate) is_focused: bool,
     pub(crate) content: String,
 }

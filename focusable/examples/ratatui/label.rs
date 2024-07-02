@@ -4,7 +4,7 @@ use ratatui::{buffer::Buffer, layout::Rect, style::Stylize, text::Line, widgets:
 use super::FocusableWidget;
 
 #[derive(Debug, Clone, Focus)]
-pub(crate) struct Label {
+pub struct Label {
     pub(crate) text: String,
 }
 

@@ -23,24 +23,6 @@ trait FocusableWidget: WidgetRef + Focus {
     }
 }
 
-// impl Focus for Box<dyn FocusableWidget> {
-//     fn can_focus(&self) -> bool {
-//         self.as_ref().can_focus()
-//     }
-
-//     fn is_focused(&self) -> bool {
-//         self.as_ref().is_focused()
-//     }
-
-//     fn focus(&mut self) {
-//         self.as_mut().focus();
-//     }
-
-//     fn blur(&mut self) {
-//         self.as_mut().blur();
-//     }
-// }
-
 fn main() -> Result<()> {
     terminal::install_color_eyre()?;
     let mut terminal = terminal::init()?;

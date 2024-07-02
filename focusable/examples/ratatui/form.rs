@@ -10,7 +10,7 @@ use ratatui::{
 use super::FocusableWidget;
 
 #[derive(Focus, FocusContainer)]
-pub(crate) struct Form {
+pub struct Form {
     pub(crate) children: Vec<Box<dyn FocusableWidget>>,
 }
 
