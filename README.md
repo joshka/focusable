@@ -1,5 +1,32 @@
 # Crate [Focusable](https://crates.io/crates/focusable)
 
+[![Crate badge]][Crate]
+[![Docs.rs Badge]][API Docs]
+[![Deps.rs Badge]][Dependency Status]
+[![License Badge]](../LICENSE-MIT)
+[![Codecov.io Badge]][Code Coverage]
+[![Discord Badge]][Ratatui Discord]
+
+[GitHub Repository] · [API Docs] · [Examples] · [Changelog] · [Contributing]
+
+[Crate badge]: https://img.shields.io/crates/v/focusable?logo=rust&style=for-the-badge
+[Docs.rs Badge]: https://img.shields.io/docsrs/focusable?logo=rust&style=for-the-badge
+[Deps.rs Badge]: https://deps.rs/repo/github/joshka/focusable/status.svg?path=focusable&style=for-the-badge
+[License Badge]: https://img.shields.io/crates/l/focusable?style=for-the-badge
+[Codecov.io Badge]: https://img.shields.io/codecov/c/github/joshka/focusable?logo=codecov&style=for-the-badge&token=BAQ8SOKEST
+[Discord Badge]: https://img.shields.io/discord/1070692720437383208?label=ratatui+discord&logo=discord&style=for-the-badge
+
+[Crate]: https://crates.io/crates/focusable
+[API Docs]: https://docs.rs/crate/focusable/
+[Dependency Status]: https://deps.rs/crate/focusable
+[Code Coverage]: https://app.codecov.io/gh/joshka/focusable
+[Ratatui Discord]: https://discord.gg/pMCEU9hNEj
+
+[GitHub Repository]: https://github.com/joshka/focusable
+[Examples]: https://github.com/joshka/focusable/blob/main/focusable/examples
+[Changelog]: https://github.com/joshka/focusable/blob/main/focusable/CHANGELOG.md
+[Contributing]: https://github.com/joshka/focusable/blob/main/CONTRIBUTING.md
+
 <!-- cargo-rdme start -->
 
 A library for managing focusable elements in an application.
