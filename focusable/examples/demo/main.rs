@@ -1,20 +1,21 @@
 use button::Button;
 use container::Container;
 use focusable::{Focus, FocusContainer};
+use label::Label;
 use text_box::TextBox;
 use tracing::Level;
 use tracing_subscriber::{fmt::time::Uptime, EnvFilter};
 
 mod button;
 mod container;
+mod label;
 mod text_box;
-
 trait Render {
     fn render(&self);
 }
 
-trait Widget: Focus + Render {
-    fn to_boxed(self) -> Box<dyn Widget>
+trait Widget: Render + Focus {
+    fn boxed(self) -> Box<dyn Widget>
     where
         Self: 'static + Sized,
     {
@@ -22,13 +23,13 @@ trait Widget: Focus + Render {
     }
 }
 
-impl<T> Widget for T where T: Focus + Render {}
-
 fn main() {
     init_tracing();
-    let mut container = Container::new();
-    container.add_child(TextBox::new("Hello, world!").to_boxed());
-    container.add_child(Button::new("Click me!").to_boxed());
+    let mut container = Container::from_iter([
+        Label::new("This is a label").boxed(),
+        TextBox::new("Hello, world!").boxed(),
+        Button::new("Click me!").boxed(),
+    ]);
     container.focus_next();
     container.render();
     container.focus_next();

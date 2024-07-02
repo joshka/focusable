@@ -9,6 +9,10 @@ documentation.workspace = true
 repository.workspace = true
 readme.workspace = true
 
+[features]
+default = ["tracing"]
+tracing = ["dep:tracing"]
+
 [lib]
 proc-macro = true
 
@@ -16,3 +20,4 @@ proc-macro = true
 quote = "1.0.36"
 syn = "2.0.68"
 proc-macro2 = "1.0.86"
+tracing = { version = "0.1.40", optional = true }
