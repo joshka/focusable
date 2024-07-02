@@ -1,9 +1,9 @@
 use focusable::Focus;
 use tracing::{info, instrument};
 
-use crate::Render;
+use crate::{Render, Widget};
 
-#[derive(Debug, Focus)]
+#[derive(Debug, Clone, Focus)]
 pub struct TextBox {
     content: String,
     is_focused: bool,
@@ -19,9 +19,11 @@ impl TextBox {
     }
 }
 
+impl Widget for TextBox {}
+
 impl Render for TextBox {
-    #[instrument(level = "debug", skip(self))]
     fn render(&self) {
-        info!(?self.is_focused, "{}", self.content);
+        let focus_indicator = if self.is_focused { " * " } else { "   " };
+        info!("{}{}", focus_indicator, self.content);
     }
 }

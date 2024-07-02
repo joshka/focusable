@@ -1,16 +1,15 @@
 use focusable::Focus;
-use tracing::{info, instrument};
+use tracing::info;
 
-use crate::Render;
+use crate::{Render, Widget};
 
-#[derive(Debug, Default, Focus)]
+#[derive(Debug, Default, Clone, Focus)]
 pub struct Button {
     is_focused: bool,
     label: String,
 }
 
 impl Button {
-    #[instrument(level = "debug")]
     pub fn new(label: &str) -> Self {
         Self {
             label: label.to_string(),
@@ -19,9 +18,11 @@ impl Button {
     }
 }
 
+impl Widget for Button {}
+
 impl Render for Button {
-    #[instrument(level = "debug", skip(self))]
     fn render(&self) {
-        info!(?self.is_focused, "{}", self.label);
+        let focus_indicator = if self.is_focused { " * " } else { "   " };
+        info!("{}{}", focus_indicator, self.label);
     }
 }
