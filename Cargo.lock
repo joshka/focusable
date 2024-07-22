@@ -181,7 +181,7 @@ dependencies = [
 
 [[package]]
 name = "focusable"
-version = "0.2.3"
+version = "0.2.4"
 dependencies = [
  "color-eyre",
  "focusable-derive",
@@ -193,7 +193,7 @@ dependencies = [
 
 [[package]]
 name = "focusable-derive"
-version = "0.2.3"
+version = "0.2.4"
 dependencies = [
  "proc-macro2",
  "quote",
