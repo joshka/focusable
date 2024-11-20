@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.7](https://github.com/joshka/focusable/compare/focusable-derive-v0.2.6...focusable-derive-v0.2.7) - 2024-11-20
+
+### Other
+
+- *(deps)* bump syn in the cargo-dependencies group ([#23](https://github.com/joshka/focusable/pull/23))
+- *(deps)* bump the cargo-dependencies group with 3 updates ([#22](https://github.com/joshka/focusable/pull/22))
+- *(deps)* bump the cargo-dependencies group with 2 updates ([#21](https://github.com/joshka/focusable/pull/21))
+- *(deps)* bump proc-macro2 in the cargo-dependencies group ([#20](https://github.com/joshka/focusable/pull/20))
+- *(deps)* bump syn in the cargo-dependencies group ([#18](https://github.com/joshka/focusable/pull/18))
+
 ## [0.2.6](https://github.com/joshka/focusable/compare/focusable-derive-v0.2.5...focusable-derive-v0.2.6) - 2024-09-02
 
 ### Other
