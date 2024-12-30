@@ -17,7 +17,7 @@ tracing = ["dep:tracing"]
 proc-macro = true
 
 [dependencies]
-quote = "1.0.37"
-syn = "2.0.90"
+quote = "1.0.38"
+syn = "2.0.93"
 proc-macro2 = "1.0.92"
 tracing = { version = "0.1.41", optional = true }
