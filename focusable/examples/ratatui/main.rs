@@ -39,8 +39,8 @@ fn main() -> Result<()> {
     form.focus_first();
     while running {
         terminal.draw(|frame| {
-            let area = frame.size();
-            frame.render_widget(&form, area);
+            let area = frame.area();
+            form.render_ref(area, frame.buffer_mut());
         })?;
         while event::poll(Duration::ZERO)? {
             if let event::Event::Key(key) = event::read()? {
