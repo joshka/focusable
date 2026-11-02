@@ -2,9 +2,9 @@ use focusable::Focus;
 use ratatui::{
     buffer::Buffer,
     layout::Rect,
-    style::{Style, Stylize},
+    style::Style,
     text::Line,
-    widgets::WidgetRef,
+    widgets::{Widget, WidgetRef},
 };
 
 use super::FocusableWidget;
@@ -33,6 +33,6 @@ impl WidgetRef for TextBox {
         } else {
             Style::new().white().on_black()
         };
-        Line::styled(&self.content, style).render_ref(area, buf);
+        Line::styled(&self.content, style).render(area, buf);
     }
 }
