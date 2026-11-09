@@ -19,6 +19,6 @@ tracing = "0.1.44"
 
 [dev-dependencies]
 color-eyre = "0.6.5"
-itertools = "0.14.0"
+itertools = "0.15.0"
 ratatui = { version = "0.30.0", features = ["unstable-widget-ref"] }
 tracing-subscriber = { version = "0.3.22", features = ["env-filter"] }
