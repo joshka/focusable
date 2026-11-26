@@ -18,6 +18,6 @@ proc-macro = true
 
 [dependencies]
 quote = "1.0.42"
-syn = "2.0.111"
+syn = "3.0.9"
 proc-macro2 = "1.0.104"
 tracing = { version = "0.1.44", optional = true }
